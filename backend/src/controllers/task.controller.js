@@ -16,6 +16,8 @@ const createTask = async (req, res) => {
   try {
     const { title, description, deadline } = req.body;
 
+    const linkedFile = req.file ? {data : req.file.buffer, contentType : req.file.memetype} : null ; 
+
     const newTask = await TaskServiceInstance.create({
       title,
       description,

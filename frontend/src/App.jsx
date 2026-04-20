@@ -1,10 +1,17 @@
-import { useState } from 'react'
+import { useState } from "react";
+import { Nav } from "./components/AppBar";
+import { Container } from "@mui/material";
+import { TaskManager } from "./components/TaskManager";
 
 function App() {
-
   return (
-   <p>Vite Page</p>
-  )
+    <>
+      <Nav />
+      <Container maxWidth="lg">
+        <TaskManager />
+      </Container>
+    </>
+  );
 }
 
-export default App
+export default App;
